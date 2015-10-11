@@ -12,6 +12,11 @@ An example of a Chrome extension that injects a stylesheet set by the user.
 * Put a URL for a stylesheet you would like to inject
 * Go to [http://vancouver.craigslist.ca/](http://vancouver.craigslist.ca/)
 
-### ToDO
+### ToDo
 
 * Add option for keeping default stylesheets
+
+##### Adding option for toggling stylesheet removal
+
+* Add new checkbox in options for removing stylesheets
+* Add conditional in contentscripts for checking option
