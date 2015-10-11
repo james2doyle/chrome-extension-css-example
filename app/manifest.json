@@ -1,0 +1,37 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.craigslist.ca/*", // target url for this extension
+        "https://*.craigslist.ca/*" // https target url
+      ],
+      "js": [
+        "scripts/contentscript.js" // js file to load during run_at
+      ],
+      "run_at": "document_end", // document_end = scripts and styles loaded
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "tabs", // tab content
+    "storage", // storage for the options page
+    "http://*.craigslist.ca/*", // url I need access to
+    "https://*.craigslist.ca/*" // url I need access to
+  ]
+}
