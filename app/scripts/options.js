@@ -5,7 +5,7 @@ function save(e) {
   clearTimeout(window.delayer);
   window.delayer = setTimeout(function() {
     var item = {};
-    item[e.target.id] = e.target.value;
+    item[e.target.id] = e.target.value.trim();
     chrome.storage.sync.set(item, function() {
       // Update status to let user know options were saved.
       var status = document.getElementById('status');

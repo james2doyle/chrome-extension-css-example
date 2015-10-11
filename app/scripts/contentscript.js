@@ -11,8 +11,11 @@ Array.prototype
 
 // inject the stylesheet that is in the options page
 chrome.storage.sync.get('cssurl', function(item) {
-  var style = document.createElement('link');
-  style.rel = 'stylesheet';
-  style.href = item.cssurl;
-  document.head.appendChild(style);
+  // dont create empty link elements
+  if (item.cssurl !== '') {
+    var style = document.createElement('link');
+    style.rel = 'stylesheet';
+    style.href = item.cssurl;
+    document.head.appendChild(style);
+  }
 });
