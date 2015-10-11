@@ -13,8 +13,14 @@
         <div class="content">
           <h2>Pretty Craigslist Options</h2>
           <div style="margin: 40px 0 10px;">
+            <p>This extension can remove the default stylesheets included in the site.</p>
+            <label for="cssremove">
+              <input type="checkbox" id="cssremove" name="cssremove" value="1" /> Remove Default Stylesheets?
+            </label>
+          </div>
+          <div style="margin: 10px 0;">
             <p>The URL for the CSS file you wish to inject into the page.</p>
-            <input type="url" id="cssurl" placeholder="URL To CSS File" />
+            <input type="url" id="cssurl" name="cssurl" placeholder="URL To CSS File" style="width: 15rem" />
           </div>
           <p><em id="status"></em></p>
         </div>
